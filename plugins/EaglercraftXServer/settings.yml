@@ -56,7 +56,7 @@ skin_service:
     ]
   enable_skinsrestorer_apply_hook: true
 voice_service:
-  enable_voice_service: false
+  enable_voice_service: true
   enable_voice_all_worlds: true
   enable_voice_on_worlds: [
     ]
