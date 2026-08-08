@@ -1,0 +1,3 @@
+[00:45:44] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] Detopes (/127.0.0.1:50722) has disconnected: An internal error occurred in your connection.
+[00:45:44] [Netty epoll Worker #2/ERROR] [com.velocitypowered.proxy.connection.MinecraftConnection]: [connected player] Detopes (/127.0.0.1:50722): read timed out
+[00:45:44] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has disconnected

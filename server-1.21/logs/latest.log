@@ -1,0 +1,55 @@
+[00:01:35] [Server thread/INFO]: Detopes issued server command: /setblock -118 70 210 minecraft:command_block
+[00:01:35] [Server thread/INFO]: [Detopes: Changed the block at -118, 70, 210]
+[00:01:56] [Server thread/INFO]: Detopes issued server command: /setblock -118 69 210 minecraft:command_block
+[00:01:56] [Server thread/INFO]: [Detopes: Changed the block at -118, 69, 210]
+[00:02:24] [Server thread/INFO]: Villager Villager['Villager'/243, uuid='146325cf-b19d-4e47-a288-5da7c6ed920f', l='ServerLevel[world]', x=-110.94, y=66.00, z=139.64, cpos=[-7, 8], tl=14000, v=true] died, message: 'Villager was slain by Zombie'
+[00:02:44] [Server thread/INFO]: Detopes issued server command: /setblock -118 69 210 minecraft:command_block
+[00:02:44] [Server thread/INFO]: [Detopes: Changed the block at -118, 69, 210]
+[00:03:21] [Server thread/INFO]: Detopes issued server command: /setblock -118 69 210 minecraft:command_block
+[00:03:21] [Server thread/INFO]: [Detopes: Changed the block at -118, 69, 210]
+[00:03:58] [Server thread/INFO]: Detopes issued server command: /setblock -118 70 210 minecraft:command_block
+[00:03:58] [Server thread/INFO]: [Detopes: Changed the block at -118, 70, 210]
+[00:04:13] [Server thread/INFO]: Detopes issued server command: /setblock -118 69 210 minecraft:command_block
+[00:04:13] [Server thread/INFO]: [Detopes: Changed the block at -118, 69, 210]
+[00:05:23] [Server thread/INFO]: Detopes issued server command: /
+[00:06:46] [Server thread/INFO]: Detopes issued server command: /setblock -118 70 209 minecraft:command_block
+[00:06:46] [Server thread/INFO]: [Detopes: Changed the block at -118, 70, 209]
+[00:06:53] [Server thread/INFO]: Detopes issued server command: /setblock -118 70 209 minecraft:command_block
+[00:06:53] [Server thread/INFO]: [Detopes: Changed the block at -118, 70, 209]
+[00:08:17] [Server thread/INFO]: Detopes issued server command: /
+[00:08:20] [Server thread/INFO]: Detopes issued server command: /
+[00:15:12] [Server thread/INFO]: Detopes issued server command: /fill -118 72 198
+[00:15:42] [Server thread/INFO]: Detopes issued server command: /fill -118 72 198 -109 79 188 bedrock
+[00:15:42] [Server thread/INFO]: [Detopes: Successfully filled 880 block(s)]
+[00:16:40] [Server thread/INFO]: Detopes issued server command: /fill -110 78 197
+[00:16:52] [Server thread/INFO]: Villager Villager['Villager'/936, uuid='44d57841-fb09-4955-8c68-f7a3a64d7c1f', l='ServerLevel[world]', x=-169.70, y=68.00, z=126.68, cpos=[-11, 7], tl=190, v=true] died, message: 'Villager was slain by Zombie'
+[00:17:13] [Server thread/INFO]: Detopes issued server command: /fill -110 78 197 -117 76 189 air
+[00:17:13] [Server thread/INFO]: [Detopes: Successfully filled 216 block(s)]
+[00:18:01] [Server thread/INFO]: Detopes issued server command: /fill -110 78 197 -117 73 189 air
+[00:18:01] [Server thread/INFO]: [Detopes: Successfully filled 213 block(s)]
+[00:18:50] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179
+[00:19:26] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -128 60 220 bedrock replace grass_block
+[00:19:27] [Server thread/INFO]: [Detopes: Successfully filled 682 block(s)]
+[00:19:47] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -128 60 220 bedrock replace dirt
+[00:19:47] [Server thread/INFO]: [Detopes: Successfully filled 2893 block(s)]
+[00:19:56] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -128 60 220 bedrock replace stone
+[00:19:56] [Server thread/INFO]: [Detopes: Successfully filled 6436 block(s)]
+[00:22:37] [Server thread/INFO]: Detopes issued server command: /give Detopes bedrock
+[00:22:37] [Server thread/INFO]: [Detopes: Gave 1 [Bedrock] to Detopes]
+[00:23:59] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -128 60 220 bedrock replace stone
+[00:24:05] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -128 60 220 bedrock replace dirt
+[00:24:23] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -128 60 220 bedrock replace grass_block
+[00:24:48] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -140 60 220 bedrock replace grass_block
+[00:24:59] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -138 60 220 bedrock replace grass_block
+[00:24:59] [Server thread/INFO]: [Detopes: Successfully filled 420 block(s)]
+[00:25:07] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -138 60 220 bedrock replace dirt
+[00:25:07] [Server thread/INFO]: [Detopes: Successfully filled 1610 block(s)]
+[00:25:12] [Server thread/INFO]: Detopes issued server command: /fill -106 82 179 -138 60 220 bedrock replace stone
+[00:25:12] [Server thread/INFO]: [Detopes: Successfully filled 3264 block(s)]
+[00:26:34] [Server thread/INFO]: Detopes issued server command: /give @p grass_block
+[00:26:34] [Server thread/INFO]: [Detopes: Gave 1 [Grass Block] to Detopes]
+[00:27:26] [Server thread/INFO]: Detopes issued server command: /give @p bedrock
+[00:27:26] [Server thread/INFO]: [Detopes: Gave 1 [Bedrock] to Detopes]
+[00:28:06] [Server thread/INFO]: Detopes issued server command: /
+[00:45:44] [Server thread/INFO]: Detopes lost connection: Disconnected
+[00:45:45] [Server thread/INFO]: Detopes left the game
