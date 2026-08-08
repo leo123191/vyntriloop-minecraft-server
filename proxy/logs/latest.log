@@ -51,3 +51,7 @@
 [17:00:57] [Netty kqueue Worker #8/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has disconnected
 [17:01:00] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] Detopes (/127.0.0.1:53091) has connected
 [17:01:00] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has connected
+[17:44:57] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [connected player] Detopes (/127.0.0.1:53091) has disconnected
+[17:44:57] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has disconnected
+[17:48:28] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] Detopes (/127.0.0.1:55841) has connected
+[17:48:28] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has connected

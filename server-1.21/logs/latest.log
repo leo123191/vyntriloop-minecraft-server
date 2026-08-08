@@ -115,3 +115,8 @@ java.lang.IllegalStateException: Must be 64 pixels wide
 [17:02:10] [Server thread/INFO]: Detopes issued server command: /say oi
 [17:02:10] [Async Chat Thread - #1/INFO]: [Not Secure] [Detopes] oi
 [17:02:16] [Server thread/INFO]: Detopes issued server command: /
+[17:44:57] [Server thread/INFO]: Detopes lost connection: Disconnected
+[17:44:57] [Server thread/INFO]: Detopes left the game
+[17:48:28] [User Authenticator #2/INFO]: UUID of player Detopes is 3f8eacd7-b55a-31ed-aec2-b6d9f10f206c
+[17:48:29] [Server thread/INFO]: Detopes joined the game
+[17:48:29] [Server thread/INFO]: Detopes[/127.0.0.1:55843] logged in with entity id 31182 at ([world]-115.51141680182371, 73.0, 192.27063880828587)
