@@ -14,7 +14,6 @@ import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Wither;
 import org.bukkit.event.EventHandler;
@@ -30,6 +29,16 @@ public final class VyntriWitherStormPlugin extends JavaPlugin implements Listene
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this, this);
         getLogger().info("VyntriWitherStorm loaded. Ritual detector is active.");
+
+        // Eagler/ViaVersion setups can occasionally make the final skull placement event
+        // unreliable. This fallback checks for completed rituals near online players every
+        // two seconds, so a correctly built ritual still activates.
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                scanForCompletedRituals();
+            }
+        }.runTaskTimer(this, 40L, 40L);
     }
 
     @Override
@@ -43,7 +52,25 @@ public final class VyntriWitherStormPlugin extends JavaPlugin implements Listene
             return true;
         }
 
-        sender.sendMessage(ChatColor.GRAY + "Use /witherstorm status");
+        if (args[0].equalsIgnoreCase("scan")) {
+            if (!(sender instanceof Player)) {
+                sender.sendMessage(ChatColor.RED + "Only a player can scan for a ritual.");
+                return true;
+            }
+
+            Player player = (Player) sender;
+            RitualMatch match = findRitualNear(player.getLocation(), 8, 5);
+            if (match == null) {
+                player.sendMessage(ChatColor.RED + "No completed Wither Storm ritual was found nearby.");
+                return true;
+            }
+
+            player.sendMessage(ChatColor.LIGHT_PURPLE + "Completed Wither Storm ritual found. Activating it now.");
+            consumeRitualAndSpawn(match, player.getName());
+            return true;
+        }
+
+        sender.sendMessage(ChatColor.GRAY + "Use /witherstorm status or /witherstorm scan");
         return true;
     }
 
@@ -52,7 +79,8 @@ public final class VyntriWitherStormPlugin extends JavaPlugin implements Listene
         final Location placedLocation = event.getBlockPlaced().getLocation();
         final String playerName = event.getPlayer().getName();
 
-        Bukkit.getScheduler().runTask(this, new Runnable() {
+        // Wait two ticks so Bukkit/ViaVersion has finished updating the placed skull block.
+        Bukkit.getScheduler().runTaskLater(this, new Runnable() {
             @Override
             public void run() {
                 Block placed = placedLocation.getBlock();
@@ -60,7 +88,7 @@ public final class VyntriWitherStormPlugin extends JavaPlugin implements Listene
                     return;
                 }
 
-                RitualMatch match = findRitual(placedLocation);
+                RitualMatch match = findRitualNear(placedLocation, 4, 4);
                 if (match == null) {
                     return;
                 }
@@ -71,7 +99,17 @@ public final class VyntriWitherStormPlugin extends JavaPlugin implements Listene
                         + placedLocation.getBlockZ());
                 consumeRitualAndSpawn(match, playerName);
             }
-        });
+        }, 2L);
+    }
+
+    private void scanForCompletedRituals() {
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            RitualMatch match = findRitualNear(player.getLocation(), 8, 5);
+            if (match != null) {
+                getLogger().info("Wither Storm fallback scanner found a completed ritual near " + player.getName());
+                consumeRitualAndSpawn(match, player.getName());
+            }
+        }
     }
 
     private boolean couldCompleteRitual(Block block) {
@@ -81,16 +119,22 @@ public final class VyntriWitherStormPlugin extends JavaPlugin implements Listene
                 || material.contains("COMMAND");
     }
 
-    private RitualMatch findRitual(Location placedLocation) {
-        World world = placedLocation.getWorld();
-        int originX = placedLocation.getBlockX();
-        int originY = placedLocation.getBlockY();
-        int originZ = placedLocation.getBlockZ();
+    private RitualMatch findRitualNear(Location center, int horizontalRadius, int verticalRadius) {
+        World world = center.getWorld();
+        int originX = center.getBlockX();
+        int originY = center.getBlockY();
+        int originZ = center.getBlockZ();
 
-        for (int dy = -4; dy <= 1; dy++) {
-            for (int dx = -2; dx <= 2; dx++) {
-                for (int dz = -2; dz <= 2; dz++) {
-                    Block base = world.getBlockAt(originX + dx, originY + dy, originZ + dz);
+        int minY = Math.max(1, originY - verticalRadius);
+        int maxY = Math.min(world.getMaxHeight() - 3, originY + verticalRadius);
+
+        for (int y = minY; y <= maxY; y++) {
+            for (int x = originX - horizontalRadius; x <= originX + horizontalRadius; x++) {
+                for (int z = originZ - horizontalRadius; z <= originZ + horizontalRadius; z++) {
+                    Block base = world.getBlockAt(x, y, z);
+                    if (!isSoulSand(base)) {
+                        continue;
+                    }
 
                     RitualMatch xAxis = matchAt(base, true);
                     if (xAxis != null) {
@@ -131,9 +175,8 @@ public final class VyntriWitherStormPlugin extends JavaPlugin implements Listene
         Block leftSkull = centerSkull.getRelative(-sideX, 0, -sideZ);
         Block rightSkull = centerSkull.getRelative(sideX, 0, sideZ);
 
-        // Legacy 1.8 clients connected through ViaVersion can make skull metadata
-        // unreliable on a 1.12 server. The ritual therefore checks for skull blocks
-        // themselves instead of rejecting a valid structure because of translated metadata.
+        // A 1.8 Eagler client is translated by ViaVersion to the 1.12 server.
+        // Checking the block type is more reliable than checking legacy skull metadata.
         if (!isSkull(leftSkull) || !isSkull(centerSkull) || !isSkull(rightSkull)) {
             return null;
         }
@@ -163,25 +206,33 @@ public final class VyntriWitherStormPlugin extends JavaPlugin implements Listene
     }
 
     private void consumeRitualAndSpawn(RitualMatch match, String playerName) {
-        Location spawn = match.base.getLocation().add(0.5, 3.1, 0.5);
+        Location spawn = match.base.getLocation().add(0.5, 3.2, 0.5);
         World world = spawn.getWorld();
 
+        final Wither storm;
+        try {
+            storm = world.spawn(spawn, Wither.class);
+        } catch (Throwable error) {
+            getLogger().severe("Could not spawn the Wither Storm: " + error.getMessage());
+            return;
+        }
+
+        // Only remove the ritual after the entity has successfully spawned.
         for (Block block : match.blocks) {
             block.setType(Material.AIR);
         }
 
-        world.strikeLightningEffect(spawn);
-        world.playSound(spawn, Sound.ENTITY_WITHER_SPAWN, 4.0f, 0.65f);
-        world.spawnParticle(Particle.EXPLOSION_LARGE, spawn, 12, 2.0, 1.4, 2.0, 0.03);
-        world.spawnParticle(Particle.PORTAL, spawn, 180, 3.0, 2.5, 3.0, 0.14);
-
-        final Wither storm = (Wither) world.spawnEntity(spawn, EntityType.WITHER);
         storm.setCustomName(ChatColor.DARK_PURPLE + "" + ChatColor.BOLD + "WITHER STORM - PHASE 1");
         storm.setCustomNameVisible(true);
         storm.setRemoveWhenFarAway(false);
         storm.setGlowing(true);
         storm.setMaxHealth(600.0);
         storm.setHealth(600.0);
+
+        world.strikeLightningEffect(spawn);
+        world.playSound(spawn, Sound.ENTITY_WITHER_SPAWN, 4.0f, 0.65f);
+        world.spawnParticle(Particle.EXPLOSION_LARGE, spawn, 12, 2.0, 1.4, 2.0, 0.03);
+        world.spawnParticle(Particle.PORTAL, spawn, 180, 3.0, 2.5, 3.0, 0.14);
 
         Bukkit.broadcastMessage(
                 ChatColor.DARK_PURPLE + "[VyntriLoop] "
