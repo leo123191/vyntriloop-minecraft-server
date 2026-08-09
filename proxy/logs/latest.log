@@ -1,7 +1,7 @@
-[06:31:13] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Booting up Velocity 3.5.1...
-[06:31:13] [main/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Connections will use kqueue channels, Java compression, Java ciphers
-[06:31:13] [main/WARN] [com.velocitypowered.proxy.config.VelocityConfiguration]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
-[06:31:13] [main/INFO] [com.velocitypowered.proxy.config.VelocityConfiguration]: Unable to load your server-icon.png, continuing without it.
+[06:40:56] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Booting up Velocity 3.5.1...
+[06:40:56] [main/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Connections will use kqueue channels, Java compression, Java ciphers
+[06:40:56] [main/WARN] [com.velocitypowered.proxy.config.VelocityConfiguration]: The proxy is running in offline mode! This is a security risk and you will NOT receive any support!
+[06:40:56] [main/INFO] [com.velocitypowered.proxy.config.VelocityConfiguration]: Unable to load your server-icon.png, continuing without it.
 java.lang.IllegalArgumentException: Image is not 64x64 (found 576x433)
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:301)
 	at com.velocitypowered.api.util.Favicon.create(Favicon.java:82)
@@ -11,57 +11,50 @@ java.lang.IllegalArgumentException: Image is not 64x64 (found 576x433)
 	at com.velocitypowered.proxy.VelocityServer.doStartupConfigLoad(VelocityServer.java:408)
 	at com.velocitypowered.proxy.VelocityServer.start(VelocityServer.java:292)
 	at com.velocitypowered.proxy.Velocity.main(Velocity.java:71)
-[06:31:13] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading localizations...
-[06:31:13] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading plugins...
-[06:31:14] [main/INFO] [eaglerxserver]: Loading EaglercraftXServer 1.1.0...
-[06:31:14] [main/INFO] [eaglerxserver]: (Platform: Velocity)
-[06:31:14] [main/INFO] [eaglerxserver]: Server Name: "EaglercraftXServer"
-[06:31:14] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin eaglerxserver 1.1.0 by lax1dude
-[06:31:14] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin viaversion 5.11.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
-[06:31:14] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin viabackwards 5.11.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
-[06:31:14] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin viarewind 4.1.3 by EnZaXD, Gerrygames, creeper123123321
-[06:31:14] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loaded 5 plugins
-[06:31:14] [EaglercraftXServer - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-[06:31:14] [EaglercraftXServer - Task Executor #0/INFO] [eaglerxserver]: Enabling EaglercraftXServer 1.1.0...
-[06:31:14] [EaglercraftXServer - Task Executor #0/INFO] [eaglerxserver]: Connecting to skin cache database "jdbc:sqlite:eagler_skins_cache.db"...
-[06:31:15] [EaglercraftXServer - Task Executor #0/INFO] [eaglerxserver]: Connected to skin cache database successfully!
-[06:31:15] [EaglercraftXServer - Task Executor #1/INFO] [eaglerxserver]: Reloaded certificate: /Users/leogomes/Workspaces/vyntriloop-minecraft-server/proxy/plugins/eaglerxserver/eagcert/$dl.34268c6e7b2a2336a2821b0171d290d6dd455cba.cert
-[06:31:15] [EaglercraftXServer - Task Executor #1/WARN] [eaglerxserver]: Update certificate was loaded: $dl.34268c6e7b2a2336a2821b0171d290d6dd455cba.cert
-[06:31:15] [Via-Mappingloader-1/INFO] [viaversion]: Loading block connection mappings ...
-[06:31:16] [EaglercraftXServer - Task Executor #0/INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
-[06:31:16] [EaglercraftXServer - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-[06:31:16] [EaglercraftXServer - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-[06:31:16] [EaglercraftXServer - Task Executor #0/INFO] [viabackwards]: Loading translations...
-[06:31:16] [EaglercraftXServer - Task Executor #0/INFO] [viabackwards]: Registering protocols...
-[06:31:16] [EaglercraftXServer - Task Executor #0/INFO] [viarewind]: Registering protocols...
-[06:31:16] [EaglercraftXServer - Task Executor #0/INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.7.2-1.7.5 (4)
-[06:31:16] [EaglercraftXServer - Task Executor #0/INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
-[06:31:16] [Netty kqueue Boss #0/INFO] [eaglerxserver]: Listener "listener0" injected into channel [id: 0x5b61cd63, L:/0.0.0.0:8081] successfully (Velocity method)
-[06:31:16] [Netty kqueue Boss #0/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Listening on /0.0.0.0:8081
-[06:31:16] [main/INFO] [com.velocitypowered.proxy.Velocity]: Done (4,19s)!
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: =============================================
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: =============================================
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]:  Updates are available for EaglerXServer
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]:  ---------------------------------------
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]:    :< Active: 1.1.0
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]:    :> Latest: 1.1.1
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]:  https://lax1dude.net/eaglerxserver/
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]:  -----------------------------------
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: =============================================
-[06:31:16] [Netty kqueue Worker #0/WARN] [eaglerxserver]: =============================================
-[06:31:17] [ViaVersion - Task Executor #1/INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
-[06:32:14] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] Detopes (/127.0.0.1:50171) has connected
-[06:32:15] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has connected
-[06:32:15] [Netty kqueue Worker #7/WARN] [viabackwards]: (1.17->1.16.4) Increased world height is NOT SUPPORTED for 1.16 players and below. They will see a void below y 0 and above 256. You can enable the `bedrock-at-y-0` config option to replace the air with a bedrock layer.
-[06:36:49] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [connected player] Detopes (/127.0.0.1:50171) has disconnected
-[06:36:49] [Netty kqueue Worker #7/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has disconnected
-[06:37:11] [Thread-0/INFO] [com.velocitypowered.proxy.VelocityServer]: Shutting down the proxy...
-[06:37:11] [Thread-0/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Closing endpoint /0.0.0.0:8081
-[06:37:11] [EaglercraftXServer - Task Executor #3/INFO] [eaglerxserver]: Disabling EaglercraftXServer 1.1.0...
-[06:37:11] [EaglercraftXServer - Task Executor #3/INFO] [eaglerxserver]: Disconnecting from skin cache database "jdbc:sqlite:eagler_skins_cache.db"...
-[06:37:11] [EaglercraftXServer - Task Executor #3/INFO] [eaglerxserver]: Disconnected from skin cache database successfully!
+[06:40:56] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading localizations...
+[06:40:56] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading plugins...
+[06:40:57] [main/INFO] [eaglerxserver]: Loading EaglercraftXServer 1.1.0...
+[06:40:57] [main/INFO] [eaglerxserver]: (Platform: Velocity)
+[06:40:57] [main/INFO] [eaglerxserver]: Server Name: "EaglercraftXServer"
+[06:40:57] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin eaglerxserver 1.1.0 by lax1dude
+[06:40:57] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin viaversion 5.11.0 by _MylesC, creeper123123321, Gerrygames, kennytv, Matsv, EnZaXD, RK_01
+[06:40:57] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin viabackwards 5.11.0 by Matsv, kennytv, Gerrygames, creeper123123321, ForceUpdate1, EnZaXD
+[06:40:57] [main/INFO] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Loaded plugin viarewind 4.1.3 by EnZaXD, Gerrygames, creeper123123321
+[06:40:57] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loaded 5 plugins
+[06:40:57] [EaglercraftXServer - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[06:40:57] [EaglercraftXServer - Task Executor #0/INFO] [eaglerxserver]: Enabling EaglercraftXServer 1.1.0...
+[06:40:57] [EaglercraftXServer - Task Executor #0/INFO] [eaglerxserver]: Connecting to skin cache database "jdbc:sqlite:eagler_skins_cache.db"...
+[06:40:58] [EaglercraftXServer - Task Executor #0/INFO] [eaglerxserver]: Connected to skin cache database successfully!
+[06:40:58] [EaglercraftXServer - Task Executor #1/INFO] [eaglerxserver]: Reloaded certificate: /Users/leogomes/Workspaces/vyntriloop-minecraft-server/proxy/plugins/eaglerxserver/eagcert/$dl.34268c6e7b2a2336a2821b0171d290d6dd455cba.cert
+[06:40:58] [EaglercraftXServer - Task Executor #1/WARN] [eaglerxserver]: Update certificate was loaded: $dl.34268c6e7b2a2336a2821b0171d290d6dd455cba.cert
+[06:41:02] [Via-Mappingloader-1/INFO] [viaversion]: Loading block connection mappings ...
+[06:41:03] [EaglercraftXServer - Task Executor #0/INFO] [viaversion]: Replacing channel initializers; you can safely ignore the following two warnings.
+[06:41:03] [EaglercraftXServer - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The server channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[06:41:03] [EaglercraftXServer - Task Executor #0/WARN] [com.velocitypowered.proxy.network.ConnectionManager]: The backend channel initializer has been replaced by java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+[06:41:03] [EaglercraftXServer - Task Executor #0/INFO] [viabackwards]: Loading translations...
+[06:41:03] [EaglercraftXServer - Task Executor #0/INFO] [viabackwards]: Registering protocols...
+[06:41:03] [EaglercraftXServer - Task Executor #0/INFO] [viarewind]: Registering protocols...
+[06:41:03] [EaglercraftXServer - Task Executor #0/INFO] [viaversion]: ViaVersion detected lowest supported version by the proxy: 1.7.2-1.7.5 (4)
+[06:41:03] [EaglercraftXServer - Task Executor #0/INFO] [viaversion]: Highest supported version by the proxy: 26.2 (776)
+[06:41:03] [Netty kqueue Boss #0/INFO] [eaglerxserver]: Listener "listener0" injected into channel [id: 0x7281e0a7, L:/0.0.0.0:8081] successfully (Velocity method)
+[06:41:03] [Netty kqueue Boss #0/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Listening on /0.0.0.0:8081
+[06:41:03] [main/INFO] [com.velocitypowered.proxy.Velocity]: Done (8,29s)!
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: =============================================
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: =============================================
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]:  Updates are available for EaglerXServer
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]:  ---------------------------------------
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]:    :< Active: 1.1.0
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]:    :> Latest: 1.1.1
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]:  https://lax1dude.net/eaglerxserver/
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]:  -----------------------------------
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: 
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: =============================================
+[06:41:03] [Netty kqueue Worker #0/WARN] [eaglerxserver]: =============================================
+[06:41:04] [ViaVersion - Task Executor #0/INFO] [viaversion]: Finished mapping loading, shutting down loader executor.
+[06:41:16] [Netty kqueue Worker #4/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] Detopes (/127.0.0.1:50376) has connected
+[06:41:16] [Netty kqueue Worker #4/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has connected
+[06:41:18] [Netty kqueue Worker #4/WARN] [viabackwards]: (1.17->1.16.4) Increased world height is NOT SUPPORTED for 1.16 players and below. They will see a void below y 0 and above 256. You can enable the `bedrock-at-y-0` config option to replace the air with a bedrock layer.
