@@ -58,3 +58,11 @@ java.lang.IllegalArgumentException: Image is not 64x64 (found 576x433)
 [06:59:32] [Netty kqueue Worker #4/INFO] [com.velocitypowered.proxy.connection.client.AuthSessionHandler]: [connected player] Detopes (/127.0.0.1:51186) has connected
 [06:59:32] [Netty kqueue Worker #4/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has connected
 [06:59:33] [Netty kqueue Worker #4/WARN] [viabackwards]: (1.17->1.16.4) Increased world height is NOT SUPPORTED for 1.16 players and below. They will see a void below y 0 and above 256. You can enable the `bedrock-at-y-0` config option to replace the air with a bedrock layer.
+[07:05:24] [Netty kqueue Worker #4/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] Detopes (/127.0.0.1:51186): kicked from server lobby: Server closed
+[07:05:24] [Netty kqueue Worker #4/INFO] [com.velocitypowered.proxy.connection.MinecraftConnection]: [server connection] Detopes -> lobby has disconnected
+[07:05:24] [Netty kqueue Worker #4/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] Detopes (/127.0.0.1:51186) has disconnected: You were kicked from lobby: Server closed
+[07:05:25] [Thread-0/INFO] [com.velocitypowered.proxy.VelocityServer]: Shutting down the proxy...
+[07:05:25] [Thread-0/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Closing endpoint /0.0.0.0:8081
+[07:05:25] [EaglercraftXServer - Task Executor #2/INFO] [eaglerxserver]: Disabling EaglercraftXServer 1.1.0...
+[07:05:25] [EaglercraftXServer - Task Executor #2/INFO] [eaglerxserver]: Disconnecting from skin cache database "jdbc:sqlite:eagler_skins_cache.db"...
+[07:05:25] [EaglercraftXServer - Task Executor #2/INFO] [eaglerxserver]: Disconnected from skin cache database successfully!

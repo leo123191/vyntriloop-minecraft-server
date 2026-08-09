@@ -86,3 +86,38 @@ java.lang.IllegalStateException: Must be 64 pixels wide
 [07:04:20] [Server thread/INFO]: Banned 676767: Banned by an operator.
 [07:04:35] [Server thread/INFO]: Detopes issued server command: /
 [07:04:39] [Server thread/INFO]: Detopes issued server command: /ban 676767
+[07:05:24] [Server thread/INFO]: Stopping server
+[07:05:24] [Server thread/INFO]: [VyntriWW2] Disabling VyntriWW2 v2.5.0
+[07:05:24] [Server thread/INFO]: Saving players
+[07:05:24] [Server thread/INFO]: Detopes lost connection: Server closed
+[07:05:24] [Server thread/INFO]: Detopes left the game
+[07:05:24] [Server thread/INFO]: Saving worlds
+[07:05:24] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[07:05:24] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[07:05:24] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[07:05:24] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Saved 32 block chunks, 130 entity chunks, 0 poi chunks in world 'world' in 0,21s
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
+[07:05:25] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 4 entity chunks, 0 poi chunks in world 'world_nether' in 0,11s
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
+[07:05:25] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0,18s
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
+[07:05:25] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
+[07:05:25] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[07:05:25] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[07:05:25] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[07:05:25] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[07:05:25] [Server thread/INFO]: Waiting for I/O tasks to complete...
+[07:05:25] [Server thread/INFO]: All I/O tasks to complete
+[07:05:25] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[07:05:25] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
