@@ -75,3 +75,14 @@ java.lang.IllegalStateException: Must be 64 pixels wide
 [06:59:33] [Server thread/INFO]: Detopes joined the game
 [06:59:34] [Server thread/INFO]: Detopes[/127.0.0.1:51188] logged in with entity id 64 at ([world]4451.076151497045, 63.0, 265.65732941679266)
 [07:00:34] [Server thread/INFO]: Detopes issued server command: /witherstorm status
+[07:02:07] [Server thread/INFO]: Detopes issued server command: /say oi
+[07:02:07] [Async Chat Thread - #1/INFO]: [Not Secure] [Detopes] oi
+[07:02:10] [Server thread/INFO]: Detopes issued server command: /tell oi
+[07:02:29] [Server thread/INFO]: Detopes issued server command: /tell @a porra veio
+[07:03:17] [Server thread/INFO]: Nothing changed. The player already is an operator
+[07:03:22] [Server thread/INFO]: Nothing changed. The player already is an operator
+[07:04:06] [Server thread/INFO]: Made 676767 no longer a server operator
+[07:04:13] [Server thread/INFO]: Made Nic no longer a server operator
+[07:04:20] [Server thread/INFO]: Banned 676767: Banned by an operator.
+[07:04:35] [Server thread/INFO]: Detopes issued server command: /
+[07:04:39] [Server thread/INFO]: Detopes issued server command: /ban 676767

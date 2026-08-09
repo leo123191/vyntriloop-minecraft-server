@@ -1,19 +1,7 @@
 [
   {
-    "uuid": "f4d33f4c-63ff-44ef-9691-3a95c4b81bb2",
-    "name": "676767",
-    "level": 4,
-    "bypassesPlayerLimit": false
-  },
-  {
     "uuid": "630d0d40-21ed-4403-b466-809a49a38786",
     "name": "ber",
-    "level": 4,
-    "bypassesPlayerLimit": false
-  },
-  {
-    "uuid": "75999265-ff22-4440-a192-440615475d9c",
-    "name": "Nic",
     "level": 4,
     "bypassesPlayerLimit": false
   },
