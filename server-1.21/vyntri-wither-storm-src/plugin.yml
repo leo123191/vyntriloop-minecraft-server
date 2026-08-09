@@ -1,0 +1,10 @@
+name: VyntriWitherStorm
+main: com.vyntriloop.minecraft.witherstorm.VyntriWitherStormPlugin
+version: 2.0.0
+author: VyntriLoop
+api-version: '1.21.4'
+description: VyntriLoop Wither Storm ritual for the Paper 1.21.4 backend.
+commands:
+  witherstorm:
+    description: Shows the Vyntri Wither Storm plugin status.
+    usage: /witherstorm status
