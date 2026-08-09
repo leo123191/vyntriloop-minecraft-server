@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-PLUGIN_SOURCE="src/vyntri-wither-storm/com/vyntriloop/minecraft/witherstorm/VyntriWitherStorm.java"
+PLUGIN_SOURCE="src/vyntri-wither-storm/com/vyntriloop/minecraft/witherstorm/VyntriWitherStormPlugin.java"
 PLUGIN_DESCRIPTOR="src/vyntri-wither-storm/plugin.yml"
 PLUGIN_BUILD_DIR=".vyntri-build/wither-storm"
 PLUGIN_JAR="plugins/VyntriWitherStorm.jar"
@@ -20,6 +20,7 @@ if command -v javac >/dev/null 2>&1 && command -v jar >/dev/null 2>&1; then
 
     cp "$PLUGIN_DESCRIPTOR" "$PLUGIN_BUILD_DIR/classes/plugin.yml"
     jar cf "$PLUGIN_JAR" -C "$PLUGIN_BUILD_DIR/classes" .
+    echo "Built $PLUGIN_JAR"
 else
     if [ ! -f "$PLUGIN_JAR" ]; then
         echo "VyntriWitherStorm could not be built because javac/jar are unavailable."
