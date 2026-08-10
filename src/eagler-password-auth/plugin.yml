@@ -1,0 +1,5 @@
+name: EaglerPasswordAuth
+main: com.vyntriloop.minecraft.passwordauth.EaglerPasswordAuthPlugin
+version: 1.0.0
+author: VyntriLoop
+softdepend: [EaglercraftXServer]

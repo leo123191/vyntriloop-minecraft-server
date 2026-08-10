@@ -1,29 +1,67 @@
 #!/bin/sh
 set -e
 
-PLUGIN_SOURCE="src/vyntri-wither-storm/com/vyntriloop/minecraft/witherstorm/VyntriWitherStormPlugin.java"
-PLUGIN_DESCRIPTOR="src/vyntri-wither-storm/plugin.yml"
-PLUGIN_BUILD_DIR=".vyntri-build/wither-storm"
-PLUGIN_JAR="plugins/VyntriWitherStorm.jar"
+WITHER_SOURCE="src/vyntri-wither-storm/com/vyntriloop/minecraft/witherstorm/VyntriWitherStormPlugin.java"
+WITHER_DESCRIPTOR="src/vyntri-wither-storm/plugin.yml"
+WITHER_BUILD_DIR=".vyntri-build/wither-storm"
+WITHER_JAR="plugins/VyntriWitherStorm.jar"
 
-if command -v javac >/dev/null 2>&1 && command -v jar >/dev/null 2>&1; then
-    rm -rf "$PLUGIN_BUILD_DIR"
-    mkdir -p "$PLUGIN_BUILD_DIR/classes" plugins
+AUTH_SOURCE="src/eagler-password-auth/com/vyntriloop/minecraft/passwordauth/EaglerPasswordAuthPlugin.java"
+AUTH_DESCRIPTOR="src/eagler-password-auth/plugin.yml"
+AUTH_BUILD_DIR=".vyntri-build/eagler-password-auth"
+AUTH_JAR="plugins/EaglerPasswordAuth.jar"
+EAGLER_API_JAR="plugins/EaglerXServer.jar"
+
+build_plugin() {
+    source_file="$1"
+    descriptor_file="$2"
+    build_dir="$3"
+    output_jar="$4"
+    classpath="$5"
+
+    rm -rf "$build_dir"
+    mkdir -p "$build_dir/classes" plugins
 
     javac \
         -encoding UTF-8 \
         -source 8 \
         -target 8 \
-        -cp paper-1.12.2.jar \
-        -d "$PLUGIN_BUILD_DIR/classes" \
-        "$PLUGIN_SOURCE"
+        -cp "$classpath" \
+        -d "$build_dir/classes" \
+        "$source_file"
 
-    cp "$PLUGIN_DESCRIPTOR" "$PLUGIN_BUILD_DIR/classes/plugin.yml"
-    jar cf "$PLUGIN_JAR" -C "$PLUGIN_BUILD_DIR/classes" .
-    echo "Built $PLUGIN_JAR"
+    cp "$descriptor_file" "$build_dir/classes/plugin.yml"
+    jar cf "$output_jar" -C "$build_dir/classes" .
+    echo "Built $output_jar"
+}
+
+if command -v javac >/dev/null 2>&1 && command -v jar >/dev/null 2>&1; then
+    build_plugin \
+        "$WITHER_SOURCE" \
+        "$WITHER_DESCRIPTOR" \
+        "$WITHER_BUILD_DIR" \
+        "$WITHER_JAR" \
+        "paper-1.12.2.jar"
+
+    if [ ! -f "$EAGLER_API_JAR" ]; then
+        echo "Eagler password authentication could not be built because $EAGLER_API_JAR is missing."
+        exit 1
+    fi
+
+    build_plugin \
+        "$AUTH_SOURCE" \
+        "$AUTH_DESCRIPTOR" \
+        "$AUTH_BUILD_DIR" \
+        "$AUTH_JAR" \
+        "paper-1.12.2.jar:$EAGLER_API_JAR"
 else
-    if [ ! -f "$PLUGIN_JAR" ]; then
+    if [ ! -f "$WITHER_JAR" ]; then
         echo "VyntriWitherStorm could not be built because javac/jar are unavailable."
+        exit 1
+    fi
+
+    if [ ! -f "$AUTH_JAR" ]; then
+        echo "EaglerPasswordAuth could not be built because javac/jar are unavailable."
         exit 1
     fi
 fi

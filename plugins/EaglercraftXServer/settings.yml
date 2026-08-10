@@ -12,7 +12,7 @@ http_websocket_ping_intervention: false
 tls_certificate_refresh_rate: 60
 enable_is_eagler_player_property: true
 eagler_players_vanilla_skin: ''
-enable_authentication_events: false
+enable_authentication_events: true
 enable_backend_rpc_api: false
 use_modernized_channel_names: false
 eagler_players_view_distance: -1
