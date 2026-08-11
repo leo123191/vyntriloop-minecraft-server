@@ -1,18 +1,18 @@
-[17:32:08] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.12; Homebrew Homebrew) on Mac OS X 15.7.7 (x86_64)
-[17:32:08] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-232-ver/1.21.4@12d8fe0 (2025-06-09T10:15:42Z) for Minecraft 1.21.4
-[17:32:10] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[17:32:10] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[17:32:10] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+[19:59:06] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.12; Homebrew Homebrew) on Mac OS X 15.7.7 (x86_64)
+[19:59:06] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-232-ver/1.21.4@12d8fe0 (2025-06-09T10:15:42Z) for Minecraft 1.21.4
+[19:59:07] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[19:59:07] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[19:59:07] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
  - VyntriWW2 (2.5.0)
-[17:32:17] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[17:32:17] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
-[17:32:17] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 223,1ms
-[17:32:19] [ServerMain/INFO]: Loaded 1370 recipes
-[17:32:19] [ServerMain/INFO]: Loaded 1481 advancements
-[17:32:19] [Server thread/INFO]: Starting minecraft server version 1.21.4
-[17:32:19] [Server thread/INFO]: Loading properties
-[17:32:19] [Server thread/INFO]: This server is running Paper version 1.21.4-232-ver/1.21.4@12d8fe0 (2025-06-09T10:15:42Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
-[17:32:20] [Server thread/WARN]: Couldn't load server icon
+[19:59:17] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[19:59:17] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
+[19:59:17] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 333,7ms
+[19:59:20] [ServerMain/INFO]: Loaded 1370 recipes
+[19:59:20] [ServerMain/INFO]: Loaded 1481 advancements
+[19:59:21] [Server thread/INFO]: Starting minecraft server version 1.21.4
+[19:59:21] [Server thread/INFO]: Loading properties
+[19:59:21] [Server thread/INFO]: This server is running Paper version 1.21.4-232-ver/1.21.4@12d8fe0 (2025-06-09T10:15:42Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
+[19:59:21] [Server thread/WARN]: Couldn't load server icon
 java.lang.IllegalArgumentException: BufferedImage must be 64 pixels wide (1463)
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:191) ~[guava-33.3.1-jre.jar:?]
 	at org.bukkit.craftbukkit.CraftServer.loadServerIcon0(CraftServer.java:2704) ~[paper-1.21.4.jar:1.21.4-232-12d8fe0]
@@ -25,43 +25,42 @@ java.lang.IllegalArgumentException: BufferedImage must be 64 pixels wide (1463)
 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1163) ~[paper-1.21.4.jar:1.21.4-232-12d8fe0]
 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310) ~[paper-1.21.4.jar:1.21.4-232-12d8fe0]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
-[17:32:20] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[17:32:20] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[17:32:20] [Server thread/INFO]: Using 4 threads for Netty based IO
-[17:32:21] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
-[17:32:22] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[17:32:22] [Server thread/INFO]: Default game type: SURVIVAL
-[17:32:22] [Server thread/INFO]: Generating keypair
-[17:32:22] [Server thread/INFO]: Starting Minecraft server on 127.0.0.1:25566
-[17:32:22] [Server thread/INFO]: Using default channel type
-[17:32:22] [Server thread/INFO]: Paper: Using Java compression from Velocity.
-[17:32:22] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
-[17:32:23] [Server thread/INFO]: [VyntriWW2] Loading server plugin VyntriWW2 v2.5.0
-[17:32:23] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[17:32:23] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[17:32:23] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[17:32:23] [Server thread/WARN]: Whilst this makes it possible to use BungeeCord, unless access to your server is properly restricted, it also opens up the ability for hackers to connect with any username they choose.
-[17:32:23] [Server thread/WARN]: Please see http://www.spigotmc.org/wiki/firewall-guide/ for further information.
-[17:32:23] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[17:32:23] [Server thread/INFO]: Preparing level "world"
-[17:32:24] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[17:32:24] [Server thread/INFO]: Preparing spawn area: 0%
-[17:32:25] [Server thread/INFO]: Preparing spawn area: 0%
-[17:32:25] [Server thread/INFO]: Preparing spawn area: 0%
-[17:32:25] [Server thread/INFO]: Preparing spawn area: 0%
-[17:32:26] [Server thread/INFO]: Time elapsed: 1707 ms
-[17:32:26] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[17:32:26] [Server thread/INFO]: Preparing spawn area: 0%
-[17:32:26] [Server thread/INFO]: Time elapsed: 185 ms
-[17:32:26] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[17:32:26] [Server thread/INFO]: Preparing spawn area: 0%
-[17:32:26] [Server thread/INFO]: Time elapsed: 87 ms
-[17:32:26] [Server thread/INFO]: [VyntriWW2] Enabling VyntriWW2 v2.5.0
-[17:32:27] [Server thread/INFO]: [VyntriWW2] VyntriWW2 enabled with 6 weapons.
-[17:32:27] [Server thread/INFO]: [spark] Starting background profiler...
-[17:32:27] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (macosx/x86_64), so the built-in Java engine will be used instead.
-[17:32:27] [Server thread/INFO]: Done preparing level "world" (4.811s)
-[17:32:28] [Server thread/ERROR]: Couldn't load server icon
+[19:59:21] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[19:59:21] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:59:21] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:59:22] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
+[19:59:22] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[19:59:23] [Server thread/INFO]: Default game type: SURVIVAL
+[19:59:23] [Server thread/INFO]: Generating keypair
+[19:59:23] [Server thread/INFO]: Starting Minecraft server on 127.0.0.1:25566
+[19:59:23] [Server thread/INFO]: Using default channel type
+[19:59:23] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[19:59:23] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[19:59:23] [Server thread/INFO]: [VyntriWW2] Loading server plugin VyntriWW2 v2.5.0
+[19:59:23] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:59:23] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[19:59:23] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[19:59:23] [Server thread/WARN]: Whilst this makes it possible to use BungeeCord, unless access to your server is properly restricted, it also opens up the ability for hackers to connect with any username they choose.
+[19:59:23] [Server thread/WARN]: Please see http://www.spigotmc.org/wiki/firewall-guide/ for further information.
+[19:59:23] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[19:59:24] [Server thread/INFO]: Preparing level "world"
+[19:59:24] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[19:59:24] [Server thread/INFO]: Preparing spawn area: 0%
+[19:59:25] [Server thread/INFO]: Preparing spawn area: 0%
+[19:59:25] [Server thread/INFO]: Preparing spawn area: 0%
+[19:59:25] [Server thread/INFO]: Time elapsed: 1108 ms
+[19:59:25] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[19:59:25] [Server thread/INFO]: Preparing spawn area: 0%
+[19:59:25] [Server thread/INFO]: Time elapsed: 152 ms
+[19:59:25] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[19:59:25] [Server thread/INFO]: Preparing spawn area: 0%
+[19:59:25] [Server thread/INFO]: Time elapsed: 88 ms
+[19:59:25] [Server thread/INFO]: [VyntriWW2] Enabling VyntriWW2 v2.5.0
+[19:59:26] [Server thread/INFO]: [VyntriWW2] VyntriWW2 enabled with 6 weapons.
+[19:59:26] [Server thread/INFO]: [spark] Starting background profiler...
+[19:59:26] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (macosx/x86_64), so the built-in Java engine will be used instead.
+[19:59:26] [Server thread/INFO]: Done preparing level "world" (2.724s)
+[19:59:26] [Server thread/ERROR]: Couldn't load server icon
 java.lang.IllegalStateException: Must be 64 pixels wide
 	at com.google.common.base.Preconditions.checkState(Preconditions.java:513) ~[guava-33.3.1-jre.jar:?]
 	at net.minecraft.server.MinecraftServer.lambda$loadStatusIcon$17(MinecraftServer.java:1458) ~[paper-1.21.4.jar:1.21.4-232-12d8fe0]
@@ -70,74 +69,66 @@ java.lang.IllegalStateException: Must be 64 pixels wide
 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1168) ~[paper-1.21.4.jar:1.21.4-232-12d8fe0]
 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310) ~[paper-1.21.4.jar:1.21.4-232-12d8fe0]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
-[17:32:28] [Server thread/INFO]: Running delayed init tasks
-[17:32:28] [Server thread/INFO]: Done (20.776s)! For help, type "help"
-[17:32:48] [User Authenticator #0/INFO]: UUID of player Detopes is 3f8eacd7-b55a-31ed-aec2-b6d9f10f206c
-[17:32:49] [Server thread/INFO]: Detopes joined the game
-[17:32:49] [Server thread/INFO]: Detopes[/127.0.0.1:50127] logged in with entity id 64 at ([world]4446.405280532815, 67.33405544782056, 265.24301685475956)
-[17:33:38] [Server thread/INFO]: Detopes lost connection: Disconnected
-[17:33:38] [Server thread/INFO]: Detopes left the game
-[17:33:39] [User Authenticator #0/INFO]: UUID of player Detopes is 3f8eacd7-b55a-31ed-aec2-b6d9f10f206c
-[17:33:40] [Server thread/INFO]: Detopes joined the game
-[17:33:40] [Server thread/INFO]: Detopes[/127.0.0.1:50166] logged in with entity id 444 at ([world]4446.405280532815, 67.33405544782056, 265.24301685475956)
-[17:34:06] [Server thread/INFO]: Detopes issued server command: /witherstorm status
-[17:34:10] [Server thread/INFO]: Detopes issued server command: /witherstorm
-[17:35:04] [Server thread/INFO]: Detopes issued server command: /witherstorm status
-[17:35:10] [Server thread/INFO]: Detopes issued server command: /witherstorm scan
-[17:35:18] [Server thread/INFO]: Detopes issued server command: /ww2 world enter
-[17:35:18] [Server thread/INFO]: Preparing start region for dimension minecraft:vyntri_hadean_castle
-[17:35:19] [Server thread/INFO]: Preparing spawn area: 0%
-[17:35:19] [Server thread/INFO]: Time elapsed: 193 ms
-[17:35:21] [Server thread/INFO]: Named entity Endermite['Dimensional Parasite'/676, uuid='f6a182de-ac7d-45d7-a061-3890d0f8219b', l='ServerLevel[vyntri_hadean_castle]', x=-1.48, y=66.81, z=-44.36, cpos=[-1, -3], tl=0, v=true] died: Dimensional Parasite was slain by Rift Stalker
-[17:35:23] [Server thread/INFO]: [VyntriWW2] Selected 4 nearest fortress volcanoes for five-second synchronized eruptions.
-[17:35:26] [Server thread/INFO]: Detopes issued server command: /ww2 world leave
-[17:38:29] [Server thread/INFO]: Detopes issued server command: /block
-[17:38:32] [Server thread/INFO]: Detopes issued server command: /give
-[17:38:58] [Server thread/INFO]: Detopes issued server command: /give @a ww2:mp40
-[17:39:07] [Server thread/INFO]: Detopes issued server command: /ww2 give @a ww2:mp40
-[17:39:21] [Server thread/INFO]: Detopes issued server command: /ww2 give Detopes ww2:mp40
-[17:39:36] [Server thread/INFO]: Detopes issued server command: /ww2 give ww2:mp40 Detopes
-[17:39:46] [Server thread/INFO]: Detopes issued server command: /ww2 give mp40 Detopes
-[19:29:16] [Server thread/INFO]: Stopping server
-[19:29:16] [Server thread/INFO]: [VyntriWW2] Disabling VyntriWW2 v2.5.0
-[19:29:16] [Server thread/INFO]: Saving players
-[19:29:16] [Server thread/INFO]: Detopes lost connection: Server closed
-[19:29:16] [Server thread/INFO]: Detopes left the game
-[19:29:16] [Server thread/INFO]: Saving worlds
-[19:29:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[19:29:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
-[19:29:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
-[19:29:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Saved 23 block chunks, 191 entity chunks, 0 poi chunks in world 'world' in 0,19s
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
-[19:29:17] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 4 entity chunks, 0 poi chunks in world 'world_nether' in 0,14s
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
-[19:29:17] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0,17s
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
-[19:29:17] [Server thread/INFO]: Saving chunks for level 'ServerLevel[vyntri_hadean_castle]'/minecraft:vyntri_hadean_castle
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'vyntri_hadean_castle'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'vyntri_hadean_castle'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'vyntri_hadean_castle'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Saved 23 block chunks, 132 entity chunks, 0 poi chunks in world 'vyntri_hadean_castle' in 0,27s
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'vyntri_hadean_castle'
-[19:29:17] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'vyntri_hadean_castle'
-[19:29:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[19:29:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[19:29:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[19:29:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (vyntri_hadean_castle): All chunks are saved
-[19:29:17] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[19:29:17] [Server thread/INFO]: Waiting for I/O tasks to complete...
-[19:29:17] [Server thread/INFO]: All I/O tasks to complete
-[19:29:17] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
-[19:29:17] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
+[19:59:26] [Server thread/INFO]: Running delayed init tasks
+[19:59:26] [Server thread/INFO]: Done (21.617s)! For help, type "help"
+[20:00:20] [User Authenticator #0/INFO]: UUID of player Detopes is 3f8eacd7-b55a-31ed-aec2-b6d9f10f206c
+[20:00:21] [Server thread/INFO]: Detopes joined the game
+[20:00:21] [Server thread/INFO]: Detopes[/127.0.0.1:55047] logged in with entity id 133 at ([world]-74.8821845674902, 72.23981939381319, 200.59581001780418)
+[20:01:43] [Server thread/INFO]: Stopping server
+[20:01:43] [Server thread/INFO]: [VyntriWW2] Disabling VyntriWW2 v2.5.0
+[20:01:43] [Server console handler/ERROR]: Caught previously unhandled exception :
+java.io.IOError: java.io.IOException: Input/output error
+	at org.jline.keymap.BindingReader.readCharacter(BindingReader.java:170) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.keymap.BindingReader.readBinding(BindingReader.java:110) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.keymap.BindingReader.readBinding(BindingReader.java:61) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.LineReaderImpl.doReadBinding(LineReaderImpl.java:923) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.LineReaderImpl.readBinding(LineReaderImpl.java:956) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:651) ~[jline-reader-3.20.0.jar:?]
+	at org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:468) ~[jline-reader-3.20.0.jar:?]
+	at net.minecrell.terminalconsole.SimpleTerminalConsole.readCommands(SimpleTerminalConsole.java:158) ~[terminalconsoleappender-1.3.0.jar:?]
+	at net.minecrell.terminalconsole.SimpleTerminalConsole.start(SimpleTerminalConsole.java:141) ~[terminalconsoleappender-1.3.0.jar:?]
+	at net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:109) ~[paper-1.21.4.jar:1.21.4-232-12d8fe0]
+Caused by: java.io.IOException: Input/output error
+	at java.base/java.io.FileInputStream.read0(Native Method) ~[?:?]
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:231) ~[?:?]
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:71) ~[?:?]
+	at org.jline.terminal.impl.AbstractPty$1.read(AbstractPty.java:58) ~[jline-terminal-3.27.1.jar:?]
+	at org.jline.terminal.impl.AbstractPty$PtyInputStream.read(AbstractPty.java:124) ~[jline-terminal-3.27.1.jar:?]
+	at org.jline.utils.NonBlockingInputStream.read(NonBlockingInputStream.java:62) ~[jline-terminal-3.27.1.jar:?]
+	at org.jline.utils.NonBlocking$NonBlockingInputStreamReader.read(NonBlocking.java:157) ~[jline-terminal-3.27.1.jar:?]
+	at org.jline.utils.NonBlockingReader.read(NonBlockingReader.java:56) ~[jline-terminal-3.27.1.jar:?]
+	at org.jline.keymap.BindingReader.readCharacter(BindingReader.java:160) ~[jline-reader-3.20.0.jar:?]
+	... 9 more
+[20:01:43] [Server thread/INFO]: Saving players
+[20:01:43] [Server thread/INFO]: Detopes lost connection: Server closed
+[20:01:43] [Server thread/INFO]: Detopes left the game
+[20:01:43] [Server thread/INFO]: Saving worlds
+[20:01:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[20:01:43] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[20:01:43] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[20:01:43] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Saved 340 block chunks, 340 entity chunks, 0 poi chunks in world 'world' in 1,27s
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
+[20:01:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_nether' in 0,18s
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
+[20:01:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_the_end' in 0,19s
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
+[20:01:45] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
+[20:01:45] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[20:01:45] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[20:01:45] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[20:01:45] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[20:01:45] [Server thread/INFO]: Waiting for I/O tasks to complete...
+[20:01:45] [Server thread/INFO]: All I/O tasks to complete
+[20:01:45] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[20:01:45] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
